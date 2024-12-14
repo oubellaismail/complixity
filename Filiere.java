@@ -41,8 +41,7 @@ public class Filiere {
         return examens;
     }
 
-    //add etudiant
-    public void setExamens(Exam Examens){
+    public void setExamen(Exam Examens){
         this.examens.add(Examens);
     }
 
@@ -55,8 +54,14 @@ public class Filiere {
     public String toString(){
         String etdsString = "";
         for(Etudiant etd : etudiants){
-            etdsString += etd.getNom() + " " + etd.getPrenom() + "\n";
+            etdsString += etd.toString() + "\n";
         }
-        return "nom filiere : " + nom + "\nEtudiant : " + etdsString;
+
+        String examsString = "";
+        for(Exam exam : examens){
+            examsString += exam.toString() + "\n";
+        }
+
+        return "nom filiere : " + nom + "\nEtudiants : " + etdsString + "\nExams : " + examsString;
     }
 }

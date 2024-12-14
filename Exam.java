@@ -1,11 +1,11 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Exam {
     private String nom;
-    private Date date;
+    private LocalDate date;
 
     // Constructor
-    public Exam(String nom, Date date) {
+    public Exam(String nom, LocalDate date) {
         this.nom = nom;
         this.date = date;
     }
@@ -21,12 +21,17 @@ public class Exam {
     }
 
     // Getter for 'date'
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
     // Setter for 'date'
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString(){
+        return "name : " + nom + ", date : " + date; 
     }
 }
